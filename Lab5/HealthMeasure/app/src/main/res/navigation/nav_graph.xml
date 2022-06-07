@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startupFragment">
+
+    <fragment
+        android:id="@+id/startupFragment"
+        android:name="com.lab5.healthMeasure.StartupFragment"
+        android:label="StartupFragment"
+        tools:layout="@layout/fragment_startup" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/prepareFragment"
+        android:name="com.lab5.healthMeasure.PrepareFragment"
+        android:label="PrepareFragment"
+        tools:layout="@layout/fragment_prepare" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/notAvailableFragment"
+        android:name="com.lab5.healthMeasure.NotAvailableFragment"
+        android:label="NotAvailableFragment"
+        tools:layout="@layout/fragment_not_available" />
+
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.lab5.healthMeasure.ExerciseFragment"
+        android:label="ExerciseFragment"
+        tools:layout="@layout/fragment_exercise">
+        <action
+            android:id="@+id/to_newExerciseConfirmation"
+            app:destination="@id/newExerciseConfirmationFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/newExerciseConfirmationFragment"
+        android:name="com.lab5.healthMeasure.NewExerciseConfirmationFragment"
+        android:label="NewExerciseConfirmationFragment"
+        tools:layout="@layout/fragment_new_exercise_confirmation" />
+</navigation>
